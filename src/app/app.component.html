@@ -1,0 +1,40 @@
+<h1>NgModel</h1>
+<h3>Hola soy {{Person.name}}, y tengo {{Person.age}}</h3>
+<input type="text" required="" #nameInput="ngModel" [(ngModel)]= "Person.name"/>
+<p>Valid: {{nameInput.valid}}</p>
+<input type="number" max = '25' min ='5' required="" #ageInput="ngModel" [(ngModel)]= "Person.age"/>
+<p>Valid: {{ageInput.valid}}</p>
+<hr/>
+
+<h1>Eventos</h1>
+<button [disabled]="bntdis">Enviar</button>
+<button (click)="boton()">Toogle button</button>
+<p>Edad {{Person.age}}</p>
+<button (click)="sedad()">mas viejon</button>
+
+<div class="box" (scroll)="onscroll($event)">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vel voluptatum voluptatibus illo voluptas aut pariatur placeat praesentium soluta. Vitae voluptatum ipsam aliquid, ipsum odio sed? Aliquam iste dolorum obcaecati!</p>
+</div>
+<h3>Hola soy {{Person.name}}, y tengo {{Person.age}}</h3>
+<input type="text" [value]= "Person.name" (keyup)="changeName($event)"/>
+
+
+<hr/>
+
+<h1>Propiedades </h1>
+<button [disabled]="bntdis">Enviar</button>
+<input type="text" [value]= "Person.name"/>
+<progress max="100" [value]="Person.age"></progress>
+<img [src]="Person.avatar " width="200">
+
+<hr/>
+
+<h1>Hola mundo</h1>
+
+<h2>{{'Hola mundo'.repeat(5)}}</h2>
+
+<p> 3 + 3 = {{3+3}}</p>
+
+<h3>Hola soy {{name}}, y tengo {{age}}</h3>
+
+<img src={{imagen}} alt="image" width="200" height="200">
